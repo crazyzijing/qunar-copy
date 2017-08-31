@@ -3,7 +3,7 @@
 		<div class="i-search">
 			<div class="i-search-con">
 				<i class="iconfont icon-search"></i>
-				<span  class="i-search-input">
+				<span  class="i-search-input"  @click="pup">
 					搜索旅行地/酒店/景点
 				</span>
 			</div>		
@@ -11,13 +11,21 @@
 		<a href="http://127.0.0.1:8020/qunar/user.html" class="i-user">
 			<div class="i-mine">
 				<i class="iconfont icon-user"></i><span>我的</span>
-			</div>
-			
-		</a>		
+			</div>		
+		</a>	
 	</div>
 </template>
 
 <script>
+	export default{
+		name:'HeaderS',
+		props:["pup"],
+		methods:{
+				get(){
+				return console.log(this.popa)
+			}
+		}
+	}
 </script>
 
 <style scoped lang="scss">
@@ -64,9 +72,10 @@
 				i{
 					font-size:.23rem;
 					flex:1;
-					line-height:97px;
+					line-height:.3rem;
 				}
 				span{
+					display:block;
 					font-size:.12rem;
 					flex:1;
 					line-height:8px;

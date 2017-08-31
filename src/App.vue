@@ -1,32 +1,13 @@
 <template>
   <div id="app">
-    <v-app></v-app>
-    <v-header></v-header>
-    <v-banner></v-banner>
-    <v-content></v-content>
-    <v-apply></v-apply>  
-    <v-bottom></v-bottom>
+    	<router-view></router-view>
   </div>
 </template>
 
 <script>
-	import Apply from './components/Index/Apply';
-	import Banner from './components/Index/Banner'
-	import Bottom from './components/Index/Bottom'
-	import ContentC from './components/Index/ContentC'
-	import Downapp from './components/Index/Downapp'
-	import HeaderS from './components/Index/HeaderS'
 	
 export default {
-  name: 'app',
-  components:{
-  	"v-apply":Apply,
-  	"v-banner":Banner,
-  	"v-bottom":Bottom,
-  	"v-content":ContentC,
-  	"v-app":Downapp,
-  	"v-header":HeaderS
-  }
+  name: 'app', 
 }
 </script>
 
@@ -39,7 +20,8 @@ export default {
 	content:'';
 	visibility: hidden;
 	height:0;
-	
+	display: block;
+	clear:both;
 }
 .left{
 	float:left;
@@ -67,4 +49,5 @@ img{
   text-align: center;
   color: #2c3e50;
 }
+ 
 </style>

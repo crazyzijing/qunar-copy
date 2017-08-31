@@ -7,7 +7,7 @@
 			</div>
 			<div class="nav1-r right">
 				<div class="nav1r-t">
-					<div :style="kind.bgc" class="left">{{kind.b}}</div>
+					<div :style="kind.bgc" class="left"><router-link :to="kind.BLink">{{kind.b}}</router-link></div>
 					<div :style="kind.bgc" class="right">{{kind.c}}</div>
 				</div>
 				<div class="nav1r-t">
@@ -38,7 +38,8 @@
 						c:"国际酒店",
 						d:"客栈 · 民宿",
 						e:'会场 · 聚会',
-						bgc:{backgroundColor:'#ff5555'}
+						bgc:{backgroundColor:'#ff5555'},
+						BLink :'/hotel'					
 					},
 					{
 						icon:'iconfont icon-feiji',
@@ -47,7 +48,8 @@
 						c:"汽车票 · 包车",
 						d:'火车票',
 						e:"船票",
-						bgc:{backgroundColor:'#00a7f7'}
+						bgc:{backgroundColor:'#00a7f7'},
+						BLink :'#javascript:;'	
 					},
 					{
 						icon:'iconfont icon-lvyoudujia',
@@ -56,7 +58,8 @@
 						c:"旅游团购",
 						d:'自由行',
 						e:"周边 · 短途",
-						bgc:{backgroundColor:'#7cb832'}
+						bgc:{backgroundColor:'#7cb832'},
+						BLink :'#javascript:;'	
 					}
 				],
 				kinds2:{
@@ -106,6 +109,12 @@
 					height:.525rem;
 					text-align: center;
 					line-height:.57rem;
+					}
+				a{
+					width:100%;
+					height:100%;
+					color:white;
+					text-decoration: none;
 				}
 			}
 		}

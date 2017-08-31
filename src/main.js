@@ -8,9 +8,7 @@ Vue.config.productionTip = false
 
 import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css'
-
 Vue.use(Mint)	
-
 
 import VueResource from 'vue-resource'
 Vue.use(VueResource);
